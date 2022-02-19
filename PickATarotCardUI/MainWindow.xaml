@@ -1,0 +1,27 @@
+﻿<Window x:Class="PickATarotCardUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PickATarotCardUI"
+        mc:Ignorable="d"
+        Title="Random Tarot Card Puller" Height="300" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="25,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2">
+            <Label x:Name="inquiry" Content="How many cards would you like to pull?" FontSize="20" FontFamily="High Tower Text"/>
+            <Slider x:Name="numberOfCards" Minimum="1" Maximum="13" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" IsSnapToTickEnabled="True" Background="White" Foreground="#FF4B2804"/>
+        </StackPanel>
+        <Button Content="Pull Cards" FontSize="20" FontFamily="High Tower Text" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Grid.Column="1" Margin="104,0,0,0" Click="Button_Click"/>
+        <ListBox x:Name="listOfCards" FontSize="20" FontFamily="High Tower Text" Margin="20,20,20,20" Grid.Column="2" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
